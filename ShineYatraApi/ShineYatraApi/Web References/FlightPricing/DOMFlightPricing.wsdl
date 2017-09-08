@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:tns="http://price.flight.arzoo.com" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" targetNamespace="http://price.flight.arzoo.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="getPricingDetailsRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getPricingDetailsResponse">
+    <wsdl:part name="out" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="DOMFlightPricingPortType">
+    <wsdl:operation name="getPricingDetails">
+      <wsdl:input name="getPricingDetailsRequest" message="tns:getPricingDetailsRequest" />
+      <wsdl:output name="getPricingDetailsResponse" message="tns:getPricingDetailsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DOMFlightPricingHttpBinding" type="tns:DOMFlightPricingPortType">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getPricingDetails">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPricingDetailsRequest">
+        <wsdlsoap:body use="literal" namespace="http://price.flight.arzoo.com" />
+      </wsdl:input>
+      <wsdl:output name="getPricingDetailsResponse">
+        <wsdlsoap:body use="literal" namespace="http://price.flight.arzoo.com" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DOMFlightPricing">
+    <wsdl:port name="DOMFlightPricingHttpPort" binding="tns:DOMFlightPricingHttpBinding">
+      <wsdlsoap:address location="http://demo.arzoo.com/ArzooWS/services/DOMFlightPricing" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

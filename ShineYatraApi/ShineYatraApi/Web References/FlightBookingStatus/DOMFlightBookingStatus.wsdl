@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:tns="http://bookingstatus.flight.arzoo.com" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" targetNamespace="http://bookingstatus.flight.arzoo.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="getBookingStatusResponse">
+    <wsdl:part name="out" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getBookingStatusRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="DOMFlightBookingStatusPortType">
+    <wsdl:operation name="getBookingStatus">
+      <wsdl:input name="getBookingStatusRequest" message="tns:getBookingStatusRequest" />
+      <wsdl:output name="getBookingStatusResponse" message="tns:getBookingStatusResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DOMFlightBookingStatusHttpBinding" type="tns:DOMFlightBookingStatusPortType">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getBookingStatus">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getBookingStatusRequest">
+        <wsdlsoap:body use="literal" namespace="http://bookingstatus.flight.arzoo.com" />
+      </wsdl:input>
+      <wsdl:output name="getBookingStatusResponse">
+        <wsdlsoap:body use="literal" namespace="http://bookingstatus.flight.arzoo.com" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DOMFlightBookingStatus">
+    <wsdl:port name="DOMFlightBookingStatusHttpPort" binding="tns:DOMFlightBookingStatusHttpBinding">
+      <wsdlsoap:address location="http://demo.arzoo.com/ArzooWS/services/DOMFlightBookingStatus" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

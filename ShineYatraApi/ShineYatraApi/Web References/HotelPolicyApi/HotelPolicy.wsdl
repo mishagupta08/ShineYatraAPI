@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:tns="http://policy.hotel.com" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" targetNamespace="http://policy.hotel.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="getHotelPolicyResponse">
+    <wsdl:part name="out" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getHotelPolicyRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="HotelPolicyPortType">
+    <wsdl:operation name="getHotelPolicy">
+      <wsdl:input name="getHotelPolicyRequest" message="tns:getHotelPolicyRequest" />
+      <wsdl:output name="getHotelPolicyResponse" message="tns:getHotelPolicyResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HotelPolicyHttpBinding" type="tns:HotelPolicyPortType">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getHotelPolicy">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getHotelPolicyRequest">
+        <wsdlsoap:body use="literal" namespace="http://policy.hotel.com" />
+      </wsdl:input>
+      <wsdl:output name="getHotelPolicyResponse">
+        <wsdlsoap:body use="literal" namespace="http://policy.hotel.com" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HotelPolicy">
+    <wsdl:port name="HotelPolicyHttpPort" binding="tns:HotelPolicyHttpBinding">
+      <wsdlsoap:address location="http://demo.arzoo.com/HotelXML_V1.2/services/HotelPolicy" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:tns="http://booking.flight.arzoo.com" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" targetNamespace="http://booking.flight.arzoo.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="getBookingDetailsRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getBookingDetailsResponse">
+    <wsdl:part name="out" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="DOMFlightBookingPortType">
+    <wsdl:operation name="getBookingDetails">
+      <wsdl:input name="getBookingDetailsRequest" message="tns:getBookingDetailsRequest" />
+      <wsdl:output name="getBookingDetailsResponse" message="tns:getBookingDetailsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DOMFlightBookingHttpBinding" type="tns:DOMFlightBookingPortType">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getBookingDetails">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getBookingDetailsRequest">
+        <wsdlsoap:body use="literal" namespace="http://booking.flight.arzoo.com" />
+      </wsdl:input>
+      <wsdl:output name="getBookingDetailsResponse">
+        <wsdlsoap:body use="literal" namespace="http://booking.flight.arzoo.com" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DOMFlightBooking">
+    <wsdl:port name="DOMFlightBookingHttpPort" binding="tns:DOMFlightBookingHttpBinding">
+      <wsdlsoap:address location="http://demo.arzoo.com/ArzooWS/services/DOMFlightBooking" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

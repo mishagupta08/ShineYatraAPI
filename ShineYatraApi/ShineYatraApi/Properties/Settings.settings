@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ShineYatraApi.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ShineYatraApi_Search_DOMFlightAvailability" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://demo.arzoo.com/ArzooWS/services/DOMFlightAvailability</Value>
+    </Setting>
+    <Setting Name="ShineYatraApi_FlightPricing_DOMFlightPricing" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://demo.arzoo.com/ArzooWS/services/DOMFlightPricing</Value>
+    </Setting>
+    <Setting Name="ShineYatraApi_FlightBooking_DOMFlightBooking" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://demo.arzoo.com/ArzooWS/services/DOMFlightBooking</Value>
+    </Setting>
+    <Setting Name="ShineYatraApi_FlightBookingStatus_DOMFlightBookingStatus" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://demo.arzoo.com/ArzooWS/services/DOMFlightBookingStatus</Value>
+    </Setting>
+    <Setting Name="ShineYatraApi_FlightCancellationRequest_DOMFlightCancellation" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://demo.arzoo.com/ArzooWS/services/DOMFlightCancellation</Value>
+    </Setting>
+    <Setting Name="ShineYatraApi_CanellationRequestStatus_DOMFlightCancellationStatus" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://demo.arzoo.com/ArzooWS/services/DOMFlightCancellationStatus</Value>
+    </Setting>
+    <Setting Name="ShineYatraApi_HotelSearch_HotelAvailSearch" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://demo.arzoo.com/HotelXML_V1.2/services/HotelAvailSearch</Value>
+    </Setting>
+    <Setting Name="ShineYatraApi_HotelDescription_HotelDetails" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://demo.arzoo.com/HotelXML_V1.2/services/HotelDetails</Value>
+    </Setting>
+    <Setting Name="ShineYatraApi_HotelPolicyApi_HotelPolicy" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://demo.arzoo.com/HotelXML_V1.2/services/HotelPolicy</Value>
+    </Setting>
+    <Setting Name="ShineYatraApi_HotelBookingConfirmation_HotelBooking" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://demo.arzoo.com/HotelXML_V1.2/services/HotelBooking</Value>
+    </Setting>
+    <Setting Name="ShineYatraApi_HotelCancellationService_HotelCancellation" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://demo.arzoo.com/HotelXML_V1.2/services/HotelCancellation</Value>
+    </Setting>
+    <Setting Name="ShineYatraApi_HotelProvisionalBooking_HotelProvisional" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://demo.arzoo.com/HotelXML_V1.2/services/HotelProvisional</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
